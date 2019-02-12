@@ -1,6 +1,6 @@
 language: java
 jdk: openjdk11
-script: echo 'hello world'
+script:
     - mvn clean install test
 after_success:
     - mvn jacoco:report coveralls:report
