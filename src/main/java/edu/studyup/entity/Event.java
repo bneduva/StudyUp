@@ -2,9 +2,12 @@ package edu.studyup.entity;
 
 
 
+import java.util.Arrays;
 import java.util.Date;
 
 import java.util.List;
+
+import javax.xml.crypto.Data;
 
 
 
@@ -43,6 +46,14 @@ public class Event {
 	private Date date;
 
 
+	public Event(Date date) {
+		
+		this.date = new Date(date.getTime());
+		
+		
+		
+		
+	}
 
 	public String getName() {
 
@@ -90,19 +101,20 @@ public class Event {
 
 	}
 
-
-
 	public Date getDate() {
-
-		return date;
-
+		
+		Date dateCopy = new Date(date.getTime());
+		
+		return dateCopy;
 	}
 
 
 
 	public void setDate(Date date) {
+		
+		Date dateCopy = new Date(date.getTime());
 
-		this.date = date;
+		this.date = dateCopy;
 
 	}
 
